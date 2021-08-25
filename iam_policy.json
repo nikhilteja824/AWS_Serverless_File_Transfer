@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::secure-file-storage-bucket/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "kms:Decrypt",
+      "Resource": "arn:aws:kms:your-region:your-account-id:key/your-kms-key-id"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "cognito-idp:*",
+      "Resource": "*"
+    }
+  ]
+}

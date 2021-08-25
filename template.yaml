@@ -1,0 +1,14 @@
+Resources:
+  UploadFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: UploadFunction.lambda_handler
+      Runtime: python3.9
+      CodeUri: .
+      Environment:
+        Variables:
+          S3_BUCKET: !Ref S3Bucket
+          KMS_KEY_ID: !Ref KmsKey
+          AWS_REGION: !Ref AWS::Region
+          COGNITO_USER_POOL_ID: your-user-pool-id
+          COGNITO_CLIENT_ID: your-client-id
