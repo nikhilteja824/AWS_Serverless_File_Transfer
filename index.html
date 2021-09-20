@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing Platform</title>
+    <script src="config.js"></script>
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+<h1>Secure File Sharing Platform</h1>
+<div>
+    <h3>Upload a File</h3>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload File</button>
+</div>
+<div>
+    <h3>Download a File</h3>
+    <input type="text" id="fileNameInput" placeholder="Enter file name">
+    <button onclick="downloadFile()">Download File</button>
+</div>
+<div id="result" style="margin-top: 20px;"></div>
+</body>
+</html>
